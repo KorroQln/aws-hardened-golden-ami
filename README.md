@@ -9,16 +9,18 @@ You can deploy CIS Benchmark hardening components via EC2 Image Builder. This gi
 
 ## Configuration
 1. Create a S3 bucket and upload build kits in S3 bucket
-2. Create IAM Role and attach following required policies:
-    - `arn:aws:iam::aws:policy/service-role/AmazonEC2RoleforSSM`
-    - `arn:aws:iam::aws:policy/EC2InstanceProfileForImageBuilder`
-3. Create EC2 Image Builder pipeline
-    - Choose a base image for customizations
+2. Create IAM Role and attach required policies:
 4. Create build components for Image Receipt
+    - Choose a base image for customizations
     - Add any necessary software from the base image
     - Customize settings and scripts 
     - Get a CIS hardening component from S3
     - Execute hardening script
     - Clean up
-5. Create a pipeline from hardening recipe
-6. Trigger pipeline
+6. Create infrastructure configurations
+    - Select IAM role with the required permissions
+7. Create distribution settings
+    - Include specific regional settings, launch permissions, accounts that can launch the output AMI and the output AMI name
+    - You will need to create new IAM Role to distribute AMIs sharing to cross account in the region
+6. Create EC2 Image Builder pipeline from hardening recipe
+7. Trigger the pipeline
