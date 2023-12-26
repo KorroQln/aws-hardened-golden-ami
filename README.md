@@ -30,7 +30,7 @@ You can deploy CIS Benchmark hardening components via EC2 Image Builder. This gi
 ## Automating CIS Audit with CIS-CAT Pro Assessor
 You can automate and leverage CIS-CAT Pro Assessor for compliance audit with all available CIS Benchmarks [here](https://github.com/CISecurity/CCPA-Docs/blob/master/docs/Coverage%20Guide.md#cis-benchmark-coverage) during pre-remediation or post-remediation (or both). Make sure you have the appropiate SecureSuite license to unlock full feature and content access for CIS-CAT Pro Assessor. 
 
-Create new copmponent and attach to the Image Recipe:
+Create new component and attach to the Image Recipe:
 1. Upload CIS-CAT Pro Assessor to S3 bucket
 2. Automate the `(Assessor-CLI.bat|.sh)` script as root, Administrator, or an equivalently privileged principal
 3. Upload audit report into S3 bucket
