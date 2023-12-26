@@ -9,7 +9,7 @@ You can deploy CIS Benchmark hardening components via EC2 Image Builder. This gi
 
 ## Configuration
 1. Create a S3 bucket and upload build kits in S3 bucket
-2. Create IAM Role and attach required policies:
+2. Create IAM Role and attach any required policies
 4. Create build components for Image Receipt
     - Choose a base image for customizations
     - Add any necessary software from the base image
