@@ -10,17 +10,28 @@ You can deploy CIS Benchmark hardening components via EC2 Image Builder. This gi
 ## Configuration
 1. Create a S3 bucket and upload build kits in S3 bucket
 2. Create IAM Role and attach any required policies
-4. Create build components for Image Receipt
+3. Create build components for Image Recipe
     - Choose a base image for customizations
     - Add any necessary software from the base image
     - Customize settings and scripts 
     - Get a CIS hardening component from S3
     - Execute hardening script
     - Clean up
-6. Create infrastructure configurations
+4. (Optional) Create a test components 
+    - Run tests on the new image to ensure stability. Examples of the test may include to test that AMI can boot, application can be run, and test specific patch or security policy has been applied
+5. Create infrastructure configurations
     - Select IAM role with the required permissions
-7. Create distribution settings
+6. Create distribution settings
     - Include specific regional settings, launch permissions, accounts that can launch the output AMI and the output AMI name
     - You will need to create new IAM Role to distribute AMIs sharing to cross account in the region
-6. Create EC2 Image Builder pipeline from hardening recipe
-7. Trigger the pipeline
+7. Create EC2 Image Builder pipeline from hardening recipe
+8. Trigger the pipeline
+
+## Automating CIS Audit with CIS-CAT Pro Assessor
+You can automate and leverage CIS-CAT Pro Assessor for compliance audit with all available CIS Benchmarks [here](https://github.com/CISecurity/CCPA-Docs/blob/master/docs/Coverage%20Guide.md#cis-benchmark-coverage) during pre-remediation or post-remediation (or both). Make sure you have the appropiate SecureSuite license to unlock full feature and content access for CIS-CAT Pro Assessor. 
+
+Create new copmponent and attach to the Image Recipe:
+1. Upload CIS-CAT Pro Assessor to S3 bucket
+2. Automate the `(Assessor-CLI.bat|.sh)` script as root, Administrator, or an equivalently privileged principal
+3. Upload audit report into S3 bucket
+> Refer to user guide for more information 
