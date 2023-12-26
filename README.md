@@ -19,5 +19,6 @@ You can deploy CIS Benchmark hardening components via EC2 Image Builder. This gi
     - Customize settings and scripts 
     - Get a CIS hardening component from S3
     - Execute hardening script
+    - Clean up
 5. Create a pipeline from hardening recipe
 6. Trigger pipeline
