@@ -15,7 +15,7 @@ You can deploy CIS Benchmark hardening components via EC2 Image Builder. This gi
     - Add any necessary software from the base image
     - Customize settings and scripts 
     - Get a CIS hardening component from S3
-    - Execute hardening script
+    - Execute hardening script as root or Administrator
     - Clean up
 4. (Optional) Create a test components 
     - Run tests on the new image to ensure stability. Examples of the test may include to test that AMI can boot, application can be run, and test specific patch or security policy has been applied
