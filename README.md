@@ -17,13 +17,13 @@ You can deploy CIS Benchmark hardening components via EC2 Image Builder. This gi
     - Get a CIS hardening component from S3
     - Execute hardening script as root or Administrator
     - Clean up
-4. (Optional) Create a test components 
+4. (Optional) Create a custom test components 
     - Run tests on the new image to ensure stability. Examples of the test may include to test that AMI can boot, application can be run, and test specific patch or security policy has been applied
 5. Create infrastructure configurations
     - Select IAM role with the required permissions
 6. Create distribution settings
     - Include specific regional settings, launch permissions, accounts that can launch the output AMI and the output AMI name
-    - You will need to create new IAM Role to distribute AMIs sharing to cross account in the region
+    - You will need to create new IAM Role to distribute AMIs to AWS Regions and AWS accounts
 7. Create EC2 Image Builder pipeline from hardening recipe
 8. Trigger the pipeline
 
