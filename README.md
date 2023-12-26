@@ -1,0 +1,1 @@
+# aws-hardened-golden-ami
